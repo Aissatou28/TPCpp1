@@ -22,6 +22,7 @@ void pile_entier::empile(int x)
 int pile_entier::depile()
 {
 	hauteur--;
+	std::cout << "Hauteur:" << hauteur <<"\n";
 	return hauteur;
 }
 
