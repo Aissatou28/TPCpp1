@@ -1,18 +1,32 @@
+#include <iostream>
+#include "pile_entier.h"
+
+
 int main()
 {
 	pile_entier Pile(20);
 
-	Pile.vide();
+	if (Pile.vide()) {
+		std::cout << "La pile est vide\n";
+	}
 
-	Pile.pleine();
+	if (Pile.pleine()) {
+		std::cout << "La pile est pleine";
+	}
 
-	Pile.empile(3);
+	if (!Pile.pleine()) {
+		Pile.empile(4);
+		std::cout << "Ajout de 4\n";
+	}
+	else {
+		std::cout << "La pile est pleine";
+	}
 
-	Pile.empile(4);
+	if (!Pile.vide()) {
+		Pile.depile();
 
-	Pile.depile();
+	}
 
 	//Pile.~pile_entier();
 
-    
 }
